@@ -1,0 +1,534 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* !CONTAINER */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+/* !HEADER */
+/* HEADER BG */
+.header-bg {
+  background:
+    linear-gradient(#1513138a, #17171780),
+    url(../img/header-bg.jfif) center/cover;
+  height: 100vh;
+}
+/* ALL NAVBAR BG */
+/* .all-navbar-bg {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+} */
+
+/* LOGO */
+header .logo a {
+  font: 600 26px arial;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+/* ALL NAVABR */
+header .all-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+/* NAVIGATION */
+header nav {
+  display: none;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  font:
+    500 18px "Roboto",
+    sans-serif;
+}
+/* HAMBURGER */
+.hamburger i {
+  color: #fff;
+  font-size: 24px;
+}
+
+/* HEADER INFO */
+header .header-info {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+header .header-info h1 {
+  font: 600 44px arial;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+header .header-info p {
+  font: 400 18px arial;
+  color: #f5f5f5;
+  line-height: 26px;
+}
+/* ORDER BUTTON */
+
+.order-button {
+  margin-top: 30px;
+}
+
+header .header-info .button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #cc0101;
+  border-radius: 10px;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  font: 500 18px arial;
+}
+
+/* !INTERYER SECTION */
+#interyer {
+  padding: 60px 0;
+  background-color: #fff;
+}
+#interyer .interyer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+#interyer .interyer-info h2 {
+  font:
+    500 28px "Roboto",
+    sans-serif;
+  text-transform: capitalize;
+  color: #125f91;
+}
+
+#interyer .interyer-info p {
+  font:
+    400 18px "Roboto",
+    sans-serif;
+  color: #1a1a1a;
+}
+
+/* Swiper Konteyneri */
+.swiper {
+  width: 100%; /* Bütün ekranı tutsun */
+  max-width: 1100px; /* Amma çox böyük ekranlarda yayılmasın */
+  max-height: 450px; /* Sabit bir hündürlük */
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; /* Şəkillər kənara çıxmasın */
+}
+
+/* Şəkillərin ölçüsü */
+
+.swiper-slide img {
+  width: 100%;
+  height: auto; /* hündürlüyü şəkilə görə */
+  max-height: 400px; /* konteyner hündürlüyü */
+  object-fit: cover; /* kəsilmədən yerləşsin */
+  object-position: center;
+  border-radius: 12px;
+}
+
+/* Düymələrin rəngi */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute; /* sliderin içində sabitləşdir */
+  top: 50%; /* dikey mərkəz */
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #27ae60 !important;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px; /* sliderin içindən 10px */
+}
+
+.swiper-button-next {
+  right: 10px; /* sliderin içindən 10px */
+}
+
+.swiper-pagination-bullet-active {
+  background: #27ae60 !important;
+}
+
+/* ALL CARDS  */
+#interyer .all-cards {
+  display: none;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+#interyer .all-cards .card img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* !COUPON */
+#coupon {
+  background-color: #f5f1eb;
+  padding: 40px 0;
+}
+.coupon-boxes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px; /* xanalara aralıq faiz ilə */
+  max-width: 90%; /* containerin genişliyinə nisbət */
+  margin: 30px auto;
+}
+
+.box {
+  width: 100%; /* grid hüceyrəsini doldurur */
+  aspect-ratio: 1/1; /* kvadrat */
+  border: 2px solid #125f91;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Doldurulmuş xana */
+.box.filled {
+  background-color: #125f91;
+  transform: scale(1.1); /* kiçik animasiya */
+}
+
+/* Kupon başlıq */
+#coupon h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #1f3d2b;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Sifariş buttonu */
+#coupon button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ffc857, #ffc857);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Hover effekti */
+#coupon button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #125f91, #125f91);
+  color: #ffc857;
+}
+
+/* Baloncuk container */
+#coupon {
+  position: relative;
+  overflow: hidden;
+}
+
+#coupon .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* baloncuklar klikləri keçirməsin */
+  z-index: 0;
+}
+
+#coupon h3,
+#coupon .coupon-boxes,
+#coupon button {
+  position: relative;
+  z-index: 2; /* BALONCUKLARDAN ÜST */
+}
+
+/* Baloncuklar */
+#coupon .bubbles span {
+  position: absolute;
+  bottom: -50px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 200, 87, 0.3);
+  border-radius: 50%;
+  animation: float 8s linear infinite;
+}
+
+/* Fərqli baloncuklar üçün gecikmə və ölçü */
+#coupon .bubbles span:nth-child(1) {
+  left: 10%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 0s;
+}
+#coupon .bubbles span:nth-child(2) {
+  left: 25%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 2s;
+}
+#coupon .bubbles span:nth-child(3) {
+  left: 40%;
+  width: 18px;
+  height: 18px;
+  animation-delay: 1s;
+}
+#coupon .bubbles span:nth-child(4) {
+  left: 55%;
+  width: 22px;
+  height: 22px;
+  animation-delay: 3s;
+}
+#coupon .bubbles span:nth-child(5) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0.5s;
+}
+#coupon .bubbles span:nth-child(6) {
+  left: 85%;
+  width: 28px;
+  height: 28px;
+  animation-delay: 2.5s;
+}
+
+/* Animasiya */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-300px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* !LOCATION */
+#location {
+  padding: 40px 15px;
+}
+
+#location .location-info {
+  margin-bottom: 30px;
+}
+
+#location .location-info h2 {
+  font:
+    700 24px "Roboto",
+    sans-serif;
+  color: #125f91;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+#location .location-info p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #111111;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Google Maps iframe */
+#location iframe {
+  width: 100%; /* tam genişlik */
+  width: 100%;
+  height: 450px; /* sabit hündürlük */
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* !FOOTER */
+#footer {
+  background-color: #111111;
+  color: #fff;
+  padding: 30px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+/* Flex container */
+.footer-flex {
+  display: flex;
+  flex-direction: column; /* mobilda yuxarı-yuxarı */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Yazılar */
+.footer-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-text p {
+  margin: 5px 0;
+}
+
+.footer-text a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-text a:hover {
+  color: #dff3e3;
+}
+
+/* Sosial ikonlar */
+.social-icons {
+  display: flex;
+  gap: 15px; /* ikonlar arası məsafə */
+}
+
+.social-icons a {
+  font-size: 18px;
+  color: #fff;
+  transition:
+    color 0.3s,
+    transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #dff3e3;
+  transform: scale(1.2);
+}
+
+@media (min-width: 520px) {
+  .swiper {
+    display: none !important;
+  }
+  #interyer .all-cards {
+    display: grid !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  #interyer .all-cards {
+    grid-template-columns: repeat(3, 1fr); /* 2 sütun */
+    gap: 30px;
+  }
+  .coupon-boxes {
+    max-width: 400px;
+  }
+  /* !LOCATION */
+  #location .location-info h2 {
+    font-size: 28px;
+  }
+
+  #location .location-info p {
+    font-size: 16px;
+  }
+
+  #location iframe {
+    height: 350px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  header .hamburger {
+    display: none;
+  }
+  header nav {
+    display: block;
+  }
+  /* !FOOTER */
+  .footer-flex {
+    flex-direction: row; /* yazılar solda/orta, ikonlar sağda */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-text {
+    flex-direction: row;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .footer-text p {
+    line-height: 24px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  /* !HEADER */
+  header .header-info h1,
+  header .header-info p {
+    width: 50%;
+  }
+
+  #interyer .all-cards {
+    gap: 40px;
+  }
+  .coupon-boxes {
+    max-width: 500px;
+    gap: 30px;
+  }
+  /* !LOCATION */
+  #location .location-info h2 {
+    font-size: 32px;
+  }
+
+  #location .location-info p {
+    font-size: 18px;
+  }
+
+  #location iframe {
+    height: 450px;
+  }
+  /* !FOOTER */
+  #footer {
+    padding: 40px 20px;
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 22px;
+  }
+}
